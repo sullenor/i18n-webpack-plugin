@@ -83,7 +83,7 @@ class I18nPlugin {
           const key = serializeNode(keyExpr);
           let translation = localizationFn(key, keyset);
 
-          if (typeof translation === 'undefined') {
+          if (translation == null) {
             if (!hideMessage) {
               let error = this.state.module[__dirname];
 
